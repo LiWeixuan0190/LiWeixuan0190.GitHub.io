@@ -100,128 +100,49 @@
             </div>
         </div>
 
+
+    
         <hr>
-
-        <!-- Research Section -->
-        <div class="research-section">
-            <h2>Research</h2>
-
-            <!-- Laparoscopic Sleeve Gastrectomy and Multiphase Flows in Stomach -->
-            <div class="col">
-                <h4>Laparoscopic Sleeve Gastrectomy and Multiphase Flows in Stomach</h4>
+        <div class="col">
+            <h4>Laparoscopic Sleeve Gastrectomy and Multiphase Flows in Stomach</h4>
+        </div>
+        <div class="row pl-3 pr-3">
+            <div class="col-md-8" id="description">
+                <p>Investigating how laparoscopic sleeve gastrectomy alters stomach geometry and motility, affecting gastric emptying and digestion. We use multiphase flow simulations to understand these changes and their impact on fluid transport and mixing within the stomach.</p>
+                <div class="col d-flex justify-content-center mb-3">
+                    <div class="btn-group" role="group" aria-label="Project links">
+                        <a class="btn btn-outline-primary" href="Projects/gastrectomy/index.html">Details</a>
+                        <a class="btn btn-outline-primary" href="Projects/Model Q-II/figure 1.jpg">Paper</a>
+                        <a class="btn btn-outline-primary" href="Projects/Model Q-II/figure 1.jpg">Video</a>
+                    </div>
+                </div>
             </div>
-            <div class="row pl-3 pr-3">
-                <div class="col-md-8" id="description">
-                    <p>The geometry and motility of the stomach play a critical role in the digestion of ingested liquid meals. Sleeve gastrectomy, 
-                    a common bariatric surgery, significantly alters the stomach’s structure and motility, which can impact gastric emptying and digestion. 
-                    This study investigates the changes in stomach geometry and gastric motility resulting from laparoscopic sleeve gastrectomy (LSG) and 
-                    their impact on digestion and gastric emptying using multiphase flow simulations.</p>
 
-                    <p>The pre-surgery stomach model was developed using MRI data. 
-                    Based on this, we constructed two post-surgery models using Blender (v4.1). 
-                    30% of the volume has been removed in the larger sleeve stomach, 
-                    and more than 60% of volume has been removed in the smaller one.</p>
-
-                    <br/>
-                    <div style="text-align: center;">
-                        <img src="Projects/research_1.png" width="600" alt="Stomach Geometry Models">
-                    </div>
-
-                    <p>Four post-surgery scenarios were explored, including cases with a complete loss of peristalsis in the sleeve 
-                    tube, uncoordinated contractions in the sleeve, differences in fundus volume, and variations in the regions where antral contraction waves were preserved.</p>
-                    
-                    <br/>
-                    <div style="text-align: center;">
-                        <img src="Projects/research_2.png" width="600" alt="Post-Surgery Scenarios">
-                    </div>
-
-                    <p>Simulations were conducted using an immersed-boundary flow solver, modeling a liquid meal to analyze 
-                    changes in gastric content mixing and emptying rates. 
-                    Our research has unveiled intriguing findings, demonstrating that varying degrees of 
-                    gastric volume reduction and impaired motility distinctly influence the stomach's transport, mixing, and emptying processes, 
-                    which are closely tied to the weight loss outcomes of bariatric surgery. A manuscript detailing these insights is currently 
-                    in preparation—stay tuned for more exciting results!</p>
-                </div>
-
-                <div class="col-md-4 d-flex align-items-center">
-                    <img class="img-fluid mb-2" src="Projects/research_1.png" alt="Stomach Geometry Models">
-                </div>
+            <div class="col-md-4">
+                <img class="img-fluid mb-2" src="Projects/research_1.png" alt="Model Q-II Gripper">
             </div>
         </div>
 
         <hr>
-
-        <!-- Large-eddy Simulation with Wall Model in Lattice Boltzmann Method for Turbulent Channel Flow -->
-        <div class="research-section">
-            <div class="col">
-                <h4>Large-eddy Simulation with Wall Model in Lattice Boltzmann Method for Turbulent Channel Flow <a href="Projects/Undergraduate thesis_Weixuan Li.pdf" class="author-social" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></h4>
+        <div class="col">
+            <h4>Large-eddy Simulation with Wall Model in Lattice Boltzmann Method for Turbulent Channel Flow</h4>
+        </div>
+        <div class="row pl-3 pr-3">
+            <div class="col-md-8" id="description">
+                <p>Using a combination of LES and wall modeling within the Lattice Boltzmann framework, we simulate turbulent channel flows efficiently. This approach reduces computational costs while maintaining accuracy, essential for understanding complex turbulent phenomena.</p>
+                <div class="col d-flex justify-content-center mb-3">
+                    <div class="btn-group" role="group" aria-label="Project links">
+                        <a class="btn btn-outline-primary" href="Projects/les-lbm/index.html">Details</a>
+                        <a class="btn btn-outline-primary" href="Projects/Model Q-II/figure 1.jpg">Paper</a>
+                        <a class="btn btn-outline-primary" href="Projects/Model Q-II/figure 1.jpg">Video</a>
+                    </div>
+                </div>
             </div>
-            <div class="row pl-3 pr-3">
-                <div class="col-md-8" id="description">
-                    <p>Turbulent flows are essential in various engineering applications, and accurately predicting these flows is key to optimizing 
-                    the design and performance of various engineering systems. This research focuses on simulating turbulent channel flow using a combination of Large-eddy Simulation (LES) 
-                    and wall models within the context of Lattice Boltzmann Method (LBM). This approach enables efficient and accurate simulation of turbulence with reduced 
-                    computational resources compared to traditional methods like Direct Numerical Simulation (DNS).</p>
 
-                    <p>This study implemented the Smagorinsky sub-grid scale model and the Musker wall model into a customized DNS code package of Lian-ping Wang's group. The LES method captures 
-                    large-scale turbulent structures and models the smaller, unresolved scales, while the wall model provides accurate near-wall flow behavior, significantly reducing the required grid resolution.</p>
-                    
-                    <br/>
-                    <div style="text-align: center;">
-                        <img src="Projects/research_3.png" width="600" alt="Numerical Setup">
-                        <figcaption>Numerical Setup</figcaption>  
-                    </div>
-
-                    <p>The LES method effectively captured the streamwise velocity profiles, showing excellent agreement with DNS and published data. 
-                    Notably, the LES method accurately resolved the flow in both the viscous sublayer and the logarithmic layer.</p>
-                    
-                    <br/>
-                    <div style="text-align: center;">
-                        <img src="Projects/research_4.png" width="600" alt="Mean Flow Velocity Profiles">
-                        <figcaption>The Log-linear Mean Flow Velocity Profiles Varying in the Transverse Direction.</figcaption>  
-                    </div>
-
-                    <p>The turbulent Reynolds stress profiles demonstrated that the LES approach could replicate essential flow characteristics.</p>
-                     
-                    <br/>
-                    <div style="text-align: center;">
-                        <img src="Projects/research_5.png" width="600" alt="Reynolds Stress Profiles">
-                        <figcaption>Reynolds Stress Profiles</figcaption>  
-                    </div>
-
-                    <p>The root-mean-square velocity profiles for different flow components (streamwise, transverse, and spanwise) were found to be 
-                    consistent with DNS data, further validating the LES method’s ability to capture turbulence intensity.</p>
-                    
-                    <br/>
-                    <div style="text-align: center;">
-                        <img src="Projects/research_6.png" width="600" alt="RMS Velocity Profiles">
-                        <figcaption>Root-Mean-Square Velocity Profiles</figcaption>  
-                    </div>
-
-                    <p>The near-wall velocity gradient, modeled using the Musker wall function, aligned well with theoretical expectations, 
-                    demonstrating that the wall model can predict near-wall behavior without the need for a high-resolution grid in that region.</p>
-                    
-                    <br/>
-                    <div style="text-align: center;">
-                        <img src="Projects/research_7.png" width="600" alt="Near-Wall Velocity Gradient">
-                        <figcaption>Near-Wall Velocity Gradient</figcaption>  
-                    </div>
-
-                    <p>A detailed comparison of turbulent viscosity showed that the LES approach approximated the turbulent-to-molecular viscosity ratio, confirming that the method was capable of accurately modeling turbulence even with a coarser grid.
-                    These results demonstrate that the combination of LES and wall models in LBM provides a robust framework for simulating turbulent channel flows efficiently and accurately. 
-                    This approach has significant potential for future applications in more complex turbulent flow simulations, such as urban canopy flows or higher Reynolds number cases.</p>
-                </div>
-
-                <div class="col-md-4">
-                    <img class="img-fluid mb-2" src="Projects/research_3.png" alt="Numerical Setup">
-                </div>
+            <div class="col-md-4">
+                <img class="img-fluid mb-2" src="Projects/research_1.png" alt="Model Q-II Gripper">
             </div>
         </div>
-
-        <hr>
-
-
-        <hr>
 
     </main>
 
