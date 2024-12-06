@@ -1,37 +1,95 @@
+<!-- Very simple website layout by me. Feel free to copy / adapt. -->
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gastrectomy and Multiphase Flows</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<html>
     <style>
+    
         main {
             padding-bottom: 60px; 
         }
+    
         footer {
+            position: fixed;
+            bottom: 0;
             background-color: #002D72;
-            color: white;
+            left: 0;
+            right: 0;
+            z-index: 1000;
             text-align: center;
             padding: 10px 0;
             height: 60px; 
         }
-        img {
+
+        /* Additional Styles for Research Sections */
+        .research-section {
+            margin-bottom: 40px;
+        }
+        .research-section img, .research-section video {
             max-width: 100%;
             height: auto;
         }
-        .project-content {
-            margin-top: 40px;
+        .research-section h4 {
+            margin-top: 20px;
+            color: #002D72;
+        }
+        .btn-group .btn {
+            margin: 5px;
         }
     </style>
-</head>
-<body>
 
-<header>
-    <nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color:#002D72;">
-        <a class="navbar-brand px-2" href="../../index.html">Weixuan Li</a>
-    </nav>
-</header>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weixuan Li</title>
+
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../assets/style.css" media="screen">
+
+        <!-- Font awesome 5 (for icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css ">
+
+        <link rel="icon" type="image/png" href="../../assets/img/JHU.logo_vertical.blue.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../../assets/img/JHU.logo_vertical.blue.png" sizes="16x16" />
+
+    </head>
+
+    <body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color:#002D72;">
+            <a class="navbar-brand px-2" href="#">Weixuan Li</a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="w-50">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="px-1 nav-item active"><a class="nav-link" href="#">About</a></li>
+                        <li class="px-1 nav-item"><a class="nav-link" href="cv/Weixuan_Li_CV.pdf">CV</a></li>
+                        <!-- Projects Dropdown -->
+                        <li class="px-1 nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                <a class="dropdown-item" href="Projects/gastrectomy/index.html">Laparoscopic Sleeve Gastrectomy</a>
+                                <a class="dropdown-item" href="Projects/les-lbm/index.html">LES Turbulent Channel Flow</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
 
 <main class="container project-content">
     <h2>Laparoscopic Sleeve Gastrectomy and Multiphase Flows in Stomach</h2>
