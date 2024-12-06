@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gastrectomy and Multiphase Flows</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        main {
+            padding-bottom: 60px; 
+        }
+        footer {
+            background-color: #002D72;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            height: 60px; 
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .project-content {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color:#002D72;">
+        <a class="navbar-brand px-2" href="../../index.html">Weixuan Li</a>
+    </nav>
+</header>
+
+<main class="container project-content">
+    <h2>Laparoscopic Sleeve Gastrectomy and Multiphase Flows in Stomach</h2>
+
+    <p>The geometry and motility of the stomach play a critical role in the digestion of ingested liquid meals. Sleeve gastrectomy, a common bariatric surgery, significantly alters the stomach’s structure and motility, which can impact gastric emptying and digestion. This study investigates the changes in stomach geometry and gastric motility resulting from laparoscopic sleeve gastrectomy (LSG) and their impact on digestion and gastric emptying using multiphase flow simulations.</p>
+
+    <p>The pre-surgery stomach model was developed using MRI data. Based on this, we constructed two post-surgery models using Blender (v4.1). 30% of the volume has been removed in the larger sleeve stomach, and more than 60% of the volume has been removed in the smaller one.</p>
+
+    <div style="text-align: center;">
+        <img src="../../assets/img/research_1.png" alt="Pre and Post Surgery Stomach Models">
+    </div>
+
+    <p>Four post-surgery scenarios were explored, including cases with a complete loss of peristalsis in the sleeve tube, uncoordinated contractions in the sleeve, differences in fundus volume, and variations in the regions where antral contraction waves were preserved.</p>
+    
+    <div style="text-align: center;">
+        <img src="../../assets/img/research_2.png" alt="Post-Surgery Scenarios">
+    </div>
+
+    <p>Simulations were conducted using an immersed-boundary flow solver, modeling a liquid meal to analyze changes in gastric content mixing and emptying rates. Our research has unveiled that varying degrees of gastric volume reduction and impaired motility distinctly influence the stomach's transport, mixing, and emptying processes, which are closely tied to the weight loss outcomes of bariatric surgery.</p>
+
+    <p>A manuscript detailing these insights is currently in preparation—stay tuned for more exciting results!</p>
+
+</main>
+
+<footer class="footer text-white text-center py-3"> 
+    <div class="container">
+        <span>Contact: wli142@jh.edu | Research Fellow @ JHU</span>
+    </div>
+</footer>
+
+</body>
+</html>
