@@ -1,106 +1,236 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Weixuan Li</title>
+<!-- Very simple website layout by me. Feel free to copy / adapt. -->
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-
+<!DOCTYPE html>
+<html>
     <style>
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      .social-link {
-        margin-right: 10px;
-      }
+    
+        main {
+            padding-bottom: 60px; 
+        }
+    
+        footer {
+            position: fixed;
+            bottom: 0;
+            background-color: #002D72;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            text-align: center;
+            padding: 10px 0;
+            height: 60px; 
+        }
+
+        /* Additional Styles for Research Sections */
+        .research-section {
+            margin-bottom: 40px;
+        }
+        .research-section img, .research-section video {
+            max-width: 100%;
+            height: auto;
+        }
+        .research-section h4 {
+            margin-top: 20px;
+            color: #002D72;
+        }
+        .btn-group .btn {
+            margin: 5px;
+        }
     </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Weixuan Li</h1>
-        <p>Master's student<br>
-          Flow Physics and Computation Lab, Prof. Rajat Mittal's Group<br>
-          Johns Hopkins University<br>
-          Computational Fluid Dynamics & Biofluid
-        </p>
-        
-        <style>
-          .social-link i {
-              vertical-align: middle; /* 图标与文本中间对齐 */
-              margin-right: 5px;      /* 调整图标与文字的距离 */
-          }
-      </style>
-      
-      <p><b>Contact:</b><br>
-      Phone: (+1) 857-706-9160<br>
-      Email: <a href="mailto:wli142@jh.edu">wli142@jh.edu</a><br>
-      Address: 4E 32nd St., Baltimore, MD 21218<br>
-      <!-- Website: <a href="https://liweixuan0190.github.io/" target="_blank">https://liweixuan0190.github.io/</a><br> -->
-      </a>
-      </p>
-        
-        <nav>
-          <h3><a href="CV\Weixuan_Li_CV.pdf">CV</a></h3>
-          <h3><a href="https://liweixuan0190.github.io/">Home</a></h3>
-          
-          <h3><a href="https://liweixuan0190.github.io/research.html">Research</a></h3>
-          <!-- <h3><a href="https://zhbalex.github.io/projects.html">Projects</a></h3>
-          <h3><a href="https://zhbalex.github.io/notes.html">Notes</a></h3>
-          <h3><a href="https://zhbalex.github.io/personal.html">Personal</a></h3> -->
 
-          <!-- <h3><a href="https://zhbalex.github.io/">Home</a></h3>
-          <h3><a href="https://zhbalex.github.io/projects--SIU&SAU.html">Projects - SIU & SAU</a></h3>
-          <h3><a href="https://zhbalex.github.io/Competition.html">Awards</a></h3>
-          <h3><a href="https://zhbalex.github.io/knowledgetable.html">Knowledge Table</a></h3>
-          <h3><a href="https://zhbalex.github.io/drawing/drawing3.pdf">Drawings</a></h3> -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weixuan Li</title>
+
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/style.css" media="screen">
+
+        <!-- Font awesome 5 (for icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css ">
+
+        <link rel="icon" type="image/png" href="assets/img/JHU.logo_vertical.blue.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="assets/img/JHU.logo_vertical.blue.png" sizes="16x16" />
+
+    </head>
+
+    <body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color:#002D72;">
+            <a class="navbar-brand px-2" href="#">Weixuan Li</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="w-50">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="px-1 nav-item active"><a class="nav-link" href="#">About</a></li>
+                        <li class="px-1 nav-item"><a class="nav-link" href="cv/Weixuan_Li_CV.pdf">CV</a></li>
+                        <!-- <li class="px-1 nav-item"><a class="nav-link" href="https://github.com/yinkai-dong"><i class="fab fa-github" style="font-size:28px;"></i></a></li>
+                        <li class="px-1 nav-item"><a class="nav-link" href="https://www.linkedin.com/in/raymondzl"><i class="fab fa-linkedin" style="font-size:28px;"></i></a></li> -->
+                    </ul>
+                </div>
+            </div>
         </nav>
+    </header>
 
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </header>
-      
-      <!-- <section>
-        <img src="IMMG_1111.JPG" height="" width="150" alt="Weixuan Li">
-        <p>I am a master's student at Johns Hopkins, delving into the fascinating world of Computational Fluid Dynamics (CFD) and biofluid mechanics under the guidance of Professor Rajat Mittal. 
-        My journey began with a B.S. in Theoretical and Applied Mechanics from the Southern University of Science and Technology (SUSTech), where I laid the groundwork for my passion for fluid dynamics.</p>
-        <p>In 2022-2023, I had the privilege of spending a transformative year as a full-time visiting student at MIT, where I not only excelled in my coursework but also worked with Prof. Mick Follows, 
-        contributing to the study titled “Intraspecific Diversity in Thermal Performance Determines Phytoplankton Ecological Niche,” which has been submitted to <em>Ecology Letters</em>.</p>
-        <p>Driven by a deep curiosity for unraveling the complexities of fluid behavior, my research interests revolve around computational fluid dynamics, biofluids, and scientific computing. 
-        I am dedicated to advancing cutting-edge simulation techniques to investigate disease-related biofluid dynamics, providing valuable insights for medical diagnosis and aiding in the improvement of surgical planning.</p> -->
-      
-      <section>
-          <img src="IMMG_1111.JPG" height="" width="150" alt="Weixuan Li" style="float: left; margin-right: 15px;">
-          <p>I am a master's student at Johns Hopkins, delving into the fascinating world of biofluid mechanics through computational fluid dynamic tools under the guidance of Dr. Rajat Mittal and Dr. Jung-Hee Seo. 
-          I obtained my Bachelor's degree in Theoretical and Applied Mechanics at the Southern University of Science and Technology (SUSTech), where I began my rersearch journey and laid the groundwork for my passion for fluid dynamics.</p>
-          <p>In 2022-2023, I had the privilege of spending a transformative year as a full-time visiting student at MIT, where I not only excelled in my coursework but also worked with Prof. Mick Follows, 
-          contributing to the study titled “Intraspecific Diversity in Thermal Performance Determines Phytoplankton Ecological Niche,” which has been submitted to <em>Ecology Letters</em>.</p>
-          <p>Driven by a deep curiosity for unraveling the complexities of fluid behavior, my research interests revolve around computational fluid dynamics, biofluids, multiphase flows, and scientific computing. 
-          I am dedicated to developing state-of-art simulation techniques to investigate disease-related biofluid dynamics, providing valuable insights for medical diagnosis and aiding in the improvement of surgical planning.</p>
-      </section>
+    <main class="container">
+        <hr>
 
-        <!-- <div style="display: flex;">
-          <div style="flex: 1;">
-            <img src="https://zhbalex.github.io/Projects/JHU-CFD/CFD_Final/cylinderresult.png" height="" width="100%" alt="Mindmap 1">
-            <br/>
-            <br/>
-            <img src="https://zhbalex.github.io/Projects/JHU-CFD/CFD_Final/ellipticresult.png" height="" width="100%" alt="Mindmap 2">
-          </div>
-          <div style="flex: 1;">
-            <img src="https://zhbalex.github.io/Projects/JHU-CFD/CFD_HW4/Solver_Architecture.jpg" height="" width="100%" alt="Solver Architecture">
-          </div>
+        <!-- About Section -->
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <img class="img-fluid rounded mx-auto d-block mb-2" id="profile" src="Photos/profile1.jpg" alt="Me">
+            </div>
+            <div class="col-md-8 pl-3" id="description">
+                <p>I am a master's student at Johns Hopkins, delving into the fascinating world of biofluid mechanics through computational fluid dynamic tools under the guidance of Dr. Rajat Mittal and Dr. Jung-Hee Seo.</p>
+                <p> I obtained my Bachelor's degree in Theoretical and Applied Mechanics at the Southern University of Science and Technology (SUSTech), where I began my research journey and laid the groundwork for my passion for fluid dynamics.</p>
+                <p>In 2022-2023, I had the privilege of spending a transformative year as a full-time visiting student at MIT, where I not only excelled in my coursework but also worked with Prof. Mick Follows, 
+                contributing to the study titled “Intraspecific Diversity in Thermal Performance Determines Phytoplankton Ecological Niche,” which has been submitted to <em>Ecology Letters</em>.</p>
+                <p>Driven by a deep curiosity for unraveling the complexities of fluid behavior, my research interests revolve around computational fluid dynamics, biofluids, multiphase flows, and scientific computing. 
+                I am dedicated to developing state-of-the-art simulation techniques to investigate disease-related biofluid dynamics, providing valuable insights for medical diagnosis and aiding in the improvement of surgical planning.</p>
+            </div>
         </div>
-        </div> -->
 
-      </section>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+        <hr>
+
+        <!-- Research Section -->
+        <div class="research-section">
+            <h2>Research</h2>
+
+            <!-- Laparoscopic Sleeve Gastrectomy and Multiphase Flows in Stomach -->
+            <div class="col">
+                <h4>Laparoscopic Sleeve Gastrectomy and Multiphase Flows in Stomach</h4>
+            </div>
+            <div class="row pl-3 pr-3">
+                <div class="col-md-8" id="description">
+                    <p>The geometry and motility of the stomach play a critical role in the digestion of ingested liquid meals. Sleeve gastrectomy, 
+                    a common bariatric surgery, significantly alters the stomach’s structure and motility, which can impact gastric emptying and digestion. 
+                    This study investigates the changes in stomach geometry and gastric motility resulting from laparoscopic sleeve gastrectomy (LSG) and 
+                    their impact on digestion and gastric emptying using multiphase flow simulations.</p>
+
+                    <p>The pre-surgery stomach model was developed using MRI data. 
+                    Based on this, we constructed two post-surgery models using Blender (v4.1). 
+                    30% of the volume has been removed in the larger sleeve stomach, 
+                    and more than 60% of volume has been removed in the smaller one.</p>
+
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="research_1.png" width="600" alt="Stomach Geometry Models">
+                    </div>
+
+                    <p>Four post-surgery scenarios were explored, including cases with a complete loss of peristalsis in the sleeve 
+                    tube, uncoordinated contractions in the sleeve, differences in fundus volume, and variations in the regions where antral contraction waves were preserved.</p>
+                    
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="research_2.png" width="600" alt="Post-Surgery Scenarios">
+                    </div>
+
+                    <p>Simulations were conducted using an immersed-boundary flow solver, modeling a liquid meal to analyze 
+                    changes in gastric content mixing and emptying rates. 
+                    Our research has unveiled intriguing findings, demonstrating that varying degrees of 
+                    gastric volume reduction and impaired motility distinctly influence the stomach's transport, mixing, and emptying processes, 
+                    which are closely tied to the weight loss outcomes of bariatric surgery. A manuscript detailing these insights is currently 
+                    in preparation—stay tuned for more exciting results!</p>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-center">
+                    <img class="img-fluid mb-2" src="research_1.png" alt="Stomach Geometry Models">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Large-eddy Simulation with Wall Model in Lattice Boltzmann Method for Turbulent Channel Flow -->
+        <div class="research-section">
+            <div class="col">
+                <h4>Large-eddy Simulation with Wall Model in Lattice Boltzmann Method for Turbulent Channel Flow <a href="Undergraduate thesis_Weixuan Li.pdf" class="author-social" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></h4>
+            </div>
+            <div class="row pl-3 pr-3">
+                <div class="col-md-8" id="description">
+                    <p>Turbulent flows are essential in various engineering applications, and accurately predicting these flows is key to optimizing 
+                    the design and performance of various engineering systems. This research focuses on simulating turbulent channel flow using a combination of Large-eddy Simulation (LES) 
+                    and wall models within the context of Lattice Boltzmann Method (LBM). This approach enables efficient and accurate simulation of turbulence with reduced 
+                    computational resources compared to traditional methods like Direct Numerical Simulation (DNS).</p>
+
+                    <p>This study implemented the Smagorinsky sub-grid scale model and the Musker wall model into a customized DNS code package of Lian-ping Wang's group. The LES method captures 
+                    large-scale turbulent structures and models the smaller, unresolved scales, while the wall model provides accurate near-wall flow behavior, significantly reducing the required grid resolution.</p>
+                    
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="research_3.png" width="600" alt="Numerical Setup">
+                        <figcaption>Numerical Setup</figcaption>  
+                    </div>
+
+                    <p>The LES method effectively captured the streamwise velocity profiles, showing excellent agreement with DNS and published data. 
+                    Notably, the LES method accurately resolved the flow in both the viscous sublayer and the logarithmic layer.</p>
+                    
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="research_4.png" width="600" alt="Mean Flow Velocity Profiles">
+                        <figcaption>The Log-linear Mean Flow Velocity Profiles Varying in the Transverse Direction.</figcaption>  
+                    </div>
+
+                    <p>The turbulent Reynolds stress profiles demonstrated that the LES approach could replicate essential flow characteristics.</p>
+                     
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="research_5.png" width="600" alt="Reynolds Stress Profiles">
+                        <figcaption>Reynolds Stress Profiles</figcaption>  
+                    </div>
+
+                    <p>The root-mean-square velocity profiles for different flow components (streamwise, transverse, and spanwise) were found to be 
+                    consistent with DNS data, further validating the LES method’s ability to capture turbulence intensity.</p>
+                    
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="research_6.png" width="600" alt="RMS Velocity Profiles">
+                        <figcaption>Root-Mean-Square Velocity Profiles</figcaption>  
+                    </div>
+
+                    <p>The near-wall velocity gradient, modeled using the Musker wall function, aligned well with theoretical expectations, 
+                    demonstrating that the wall model can predict near-wall behavior without the need for a high-resolution grid in that region.</p>
+                    
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="research_7.png" width="600" alt="Near-Wall Velocity Gradient">
+                        <figcaption>Near-Wall Velocity Gradient</figcaption>  
+                    </div>
+
+                    <p>A detailed comparison of turbulent viscosity showed that the LES approach approximated the turbulent-to-molecular viscosity ratio, confirming that the method was capable of accurately modeling turbulence even with a coarser grid.
+                    These results demonstrate that the combination of LES and wall models in LBM provides a robust framework for simulating turbulent channel flows efficiently and accurately. 
+                    This approach has significant potential for future applications in more complex turbulent flow simulations, such as urban canopy flows or higher Reynolds number cases.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <img class="img-fluid mb-2" src="research_3.png" alt="Numerical Setup">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+
+        <hr>
+
+    </main>
+
+    <footer class="footer text-white text-center py-3"> 
+        <div class="container">
+            <span>wli142@jh.edu | (857)-706-9160 | Master Student @ Johns Hopkins University</span>
+        </div>
+    </footer>   
+
+    </body>
+
 </html>
