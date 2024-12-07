@@ -102,34 +102,36 @@
     <p>I developed a FORTRAN90 module to implement the Smagorinsky sub-grid scale model and the Musker wall model into the customized direct numerical simulation (DNS) code package. LES captures large-scale turbulent structures and models smaller scales, while the wall model provides accurate near-wall flow behavior, reducing grid resolution requirements.</p>
 
     <div style="text-align: center;">
-        <img src="../research_3.png" alt="Numerical Setup" style="width: 80%; max-width: 500px; height: auto;">
-        <figcaption>Numerical Setup</figcaption>  
+        <img src="/Numerical Setup.png" alt="Schematic Configuration of the Turbulent Channel Flow" style="width: 80%; max-width: 500px; height: auto;">
+        <!-- <figcaption>Numerical Setup</figcaption>   -->
     </div>
 
     <p>The LES method captured streamwise velocity profiles that matched well with DNS and published data, accurately resolving both viscous sublayer and logarithmic layer flows.</p>
 
     <div style="text-align: center;">
-        <img src="../research_4.png" alt="Velocity Profiles" style="width: 80%; max-width: 500px; height: auto;">
-        <figcaption>The log-linear mean flow velocity profiles varying in the transverse direction.</figcaption>  
+        <img src="/Streamwise_1.png" alt="Mean Flow Velocity Profiles" style="width: 80%; max-width: 500px; height: auto;">
+        <!-- <figcaption>The log-linear mean flow velocity profiles varying in the transverse direction.</figcaption>   -->
     </div>
 
-    <p>Reynolds stress profiles and root-mean-square velocity distributions also aligned with DNS data, confirming the model’s ability to replicate essential turbulence characteristics. The near-wall velocity gradient, modeled via the Musker wall function, matched theoretical expectations without requiring a high-resolution grid.</p>
+    <p>Reynolds stress profiles and root-mean-square velocity distributions also aligned with DNS data, confirming the model’s ability to replicate essential turbulence characteristics.
+         The near-wall velocity gradient, modeled via the Musker wall function, also matched the DNS data without requiring a high-resolution grid.</p>
 
     <div style="text-align: center;">
-        <img src="../research_5.png" alt="Reynolds Stress Profiles" style="width: 80%; max-width: 500px; height: auto;">
-        <figcaption>Reynolds Stress Profiles</figcaption>  
+        <img src="/re_ems_vel.png" alt="Validation Results: Reynolds Stress Profiles, Root-mean-square Velocity Components, and Streamwise Velocity Gradient" style="width: 80%; max-width: 500px; height: auto;">
+        <!-- <figcaption>Reynolds Stress Profiles</figcaption>   -->
     </div>
-    <div style="text-align: center;">
+    <!-- <div style="text-align: center;">
         <img src="../research_6.png" alt="RMS Velocity Profiles" style="width: 80%; max-width: 500px; height: auto;">
         <figcaption>Root-Mean-Square Velocity Profiles</figcaption>  
     </div>
     <div style="text-align: center;">
         <img src="../research_7.png" alt="Near-Wall Velocity Gradient" style="width: 80%; max-width: 500px; height: auto;">
         <figcaption>Near-Wall Velocity Gradient</figcaption>  
-    </div>
+    </div> -->
 
-    <p>Comparisons of turbulent viscosity revealed that the LES approach could approximate the turbulent-to-molecular viscosity ratio with accuracy. This demonstrates that LES plus wall modeling in LBM provides a robust and efficient framework for simulating turbulent channel flows. The approach holds promise for more complex turbulent simulations, including higher Reynolds numbers and urban flow scenarios.</p>
-
+    <p>This research successfully validated our LES implementation through comprehensive comparisons of key turbulent statistics with DNS data.
+         The results demonstrated great agreement while improving computational efficiency.
+          The developed framework not only advanced our understanding of turbulent flows but also established a foundation for future urban canopy flow simulations, demonstrating the potential of combining LBM with wall-modeled LES for complex flow problems.
 </main>
 
 <footer class="footer text-white text-center py-3"> 
