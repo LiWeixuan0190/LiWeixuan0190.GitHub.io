@@ -37,4 +37,40 @@ a {
 /*    padding-left: 2vw;*/
 }
 
+main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    flex: 1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: #002D72;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 60px;
+    /* display: flex;  */
+    /* align-items: center; */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #002D72;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 
