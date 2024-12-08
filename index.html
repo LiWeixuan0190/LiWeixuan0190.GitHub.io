@@ -35,6 +35,14 @@
         .btn-group .btn {
             margin: 5px;
         }
+        .video-container {
+            float: right; 
+            width: 30%;
+        }
+        /* .custom-video {
+            max-width: 100%;
+            height: auto;
+        } */
     </style>
 
     <head>
@@ -55,6 +63,7 @@
 
         <link rel="icon" type="image/png" href="/assets/img/JHU.logo_vertical.blue.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="/assets/img/JHU.logo_vertical.blue.png" sizes="16x16" />
+        <meta charset="UTF-8">
 
     </head>
 
@@ -73,7 +82,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="px-1 nav-item active"><a class="nav-link" href="/">About</a></li>
-                        <li class="px-1 nav-item"><a class="nav-link" href="/CV/Weixuan_Li_CV.pdf">CV</a></li>
+                        <li class="px-1 nav-item"><a class="nav-link" href="/CV/Weixuan Li_CV.pdf">CV</a></li>
                         <!-- Projects Dropdown -->
                         <li class="px-1 nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -82,6 +91,7 @@
                             <div class="dropdown-menu" aria-labelledby="projectsDropdown">
                                 <a class="dropdown-item" href="/Projects/gastrectomy">Laparoscopic Sleeve Gastrectomy</a>
                                 <a class="dropdown-item" href="/Projects/LES">LES Turbulent Channel Flow</a>
+                                <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a>
                             </div>
                         </li>
                     </ul>j
@@ -142,11 +152,16 @@
             <!-- <div class="col-md-4">
                 <img class="img-fluid mb-2" src="/Projects/gastrectomy/lsg_1.png" alt="Pre- and post-operative stomach models">
             </div> -->
-            <div class="col-md-4">
-                <video class="img-fluid mb-2" controls autoplay loop muted>
+            <div class="col-md-4 video-container">
+                <video class="img-fluid mb-2 custom-video" controls autoplay loop muted>
                     <source src="Projects/gastrectomy/food bolus.mp4" type="video/mp4">
                 </video>
             </div>
+            <!-- <div class="col-md-4">
+                <video class="img-fluid mb-2" controls autoplay loop muted>
+                    <source src="Projects/gastrectomy/food bolus.mp4" type="video/mp4">
+                </video>
+            </div> -->
         </div>
 
         <hr>
