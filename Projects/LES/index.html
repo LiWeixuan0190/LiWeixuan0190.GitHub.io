@@ -3,22 +3,6 @@
 <!DOCTYPE html>
 <html>
     <style>
-    
-        main {
-            padding-bottom: 60px; 
-        }
-    
-        footer {
-            position: fixed;
-            bottom: 0;
-            background-color: #002D72;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            text-align: center;
-            padding: 10px 0;
-            height: 60px; 
-        }
 
         /* Additional Styles for Research Sections */
         .research-section {
@@ -85,7 +69,8 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="projectsDropdown">
                                 <a class="dropdown-item" href="/Projects/gastrectomy">Laparoscopic Sleeve Gastrectomy</a>
-                                <a class="dropdown-item" href="/Projects/les-lbm">LES Turbulent Channel Flow</a>
+                                <a class="dropdown-item" href="/Projects/LES">LES Turbulent Channel Flow</a>
+                                <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a>
                             </div>
                         </li>
                     </ul>
@@ -97,7 +82,7 @@
 
 <main class="container project-content">
     <h2>Large-eddy Simulation with Wall Model in Lattice Boltzmann Method for Turbulent Channel Flow</h2>
-    <p><a href="/Undergraduate thesis_Weixuan Li.pdf" target="_blank">View PDF of Undergraduate Thesis</a></p>
+    <p><a href="Undergraduate thesis_Weixuan Li.pdf" target="_blank">View PDF of Undergraduate Thesis</a></p>
 
     <p>Turbulent flows are essential in various engineering applications. Accurately predicting these flows is key to optimizing engineering systems design and performance. 
         This research focuses on simulating turbulent channel flow using a combination of Large-eddy Simulation (LES) and wall models and the Lattice Boltzmann Method (LBM). 
@@ -106,14 +91,15 @@
     <p>I developed a FORTRAN90 module to implement the Smagorinsky sub-grid scale model and the Musker wall model into the customized direct numerical simulation (DNS) code package. LES captures large-scale turbulent structures and models smaller scales, while the wall model provides accurate near-wall flow behavior, reducing grid resolution requirements.</p>
 
     <div style="text-align: center;">
-        <img src="/Numerical Setup.png" alt="Schematic Configuration of the Turbulent Channel Flow" style="width: 80%; max-width: 500px; height: auto;">
+        <img src="Numerical Setup.png" alt="Schematic Configuration of the Turbulent Channel Flow" style="width: 80%; max-width: 500px; height: auto;">
         <!-- <figcaption>Numerical Setup</figcaption>   -->
     </div>
 
     <p>The LES method captured streamwise velocity profiles that matched well with DNS and published data, accurately resolving both viscous sublayer and logarithmic layer flows.</p>
 
     <div style="text-align: center;">
-        <img src="/Streamwise_1.png" alt="Mean Flow Velocity Profiles" style="width: 50%; max-width: 300px; height: auto;">
+        <img src="/Streamwise_1.png" alt="Mean Flow Velocity Profiles" style="width: 80%; max-width: 500px; height: auto;">
+        <img src="Streamwise_1.png" alt="Mean Flow Velocity Profiles" style="width: 80%; max-width: 500px; height: auto;">
         <!-- <figcaption>The log-linear mean flow velocity profiles varying in the transverse direction.</figcaption>   -->
     </div>
 
@@ -121,7 +107,7 @@
          The near-wall velocity gradient, modeled via the Musker wall function, also matched the DNS data without requiring a high-resolution grid.</p>
 
     <div style="text-align: center;">
-        <img src="/re_ems_vel.png" alt="Validation Results: Reynolds Stress Profiles, Root-mean-square Velocity Components, and Streamwise Velocity Gradient" style="width: 80%; max-width: 500px; height: auto;">
+        <img src="re_rms_vel.png" alt="Validation Results: Reynolds Stress Profiles, Root-mean-square Velocity Components, and Streamwise Velocity Gradient" style="width: 80%; max-width: 500px; height: auto;">
         <!-- <figcaption>Reynolds Stress Profiles</figcaption>   -->
     </div>
     <!-- <div style="text-align: center;">
