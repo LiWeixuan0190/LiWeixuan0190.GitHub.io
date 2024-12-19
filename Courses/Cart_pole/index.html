@@ -81,43 +81,28 @@
 
 
 <main class="container project-content">
-    <h2>Reinforcement Learning, Cart-Pole Problem</h2>
-    <p><a href="Intraspecific diversity in thermal performance determines.pdf" target="_blank">View PDF of Preprint Manuscript</a></p>
-    <p>My research at MIT explored how thermal diversity within marine phytoplankton species influences their global distribution and ecological niches through computational modeling approaches. 
-        The study focused on <em>Gephyrocapsa huxleyi</em>, a globally distributed coccolithophore species crucial for marine carbon cycling, using both experimental data and computational modeling approaches.</p>
-    <p>I was responsible for computational analysis in this project, utilizing MIT's Darwin ecosystem model to examine the implications of thermal trait diversity on phytoplankton distribution. 
-        The model resolved different phytoplankton types with varying thermal optima and niche widths, incorporating both "specialist" and "generalist" thermal strategies. 
-        The simulation revealed distinctive biogeographic patterns, with generalist strains dominating in temperate regions while specialists thrived in subtropical gyres. 
-        This distribution pattern was influenced by both temperature variability and local resource availability.
-    <div style="text-align: center;">
-        <img src="cocco_3.png" alt="Biomass-Weighted Thermal Niche Width" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>Biomass-Weighted Thermal Niche Width</figcaption>
+    <h2>Reinforcement Learning for Cart-Pole Control</h2>
+    <p><a href="Final_Report_Cart_Pole_Problem.pdf" target="_blank">View PDF of Final Report</a></p>
+    <p><a href="Implementation_code.zip" target="_blank">View Python Code</a></p>
+    <p>This project explores the application of reinforcement learning techniques to solve the classic cart-pole problem, a benchmark control challenge involving a 2D inverted pendulum. The objective is to balance a pole on a moving cart by applying forces to the cart, ensuring stability despite dynamic and nonlinear system behavior.</p>
+   <div style="text-align: center;">
+        <img src="cartpole.png" alt="A schematic of the cart-pole system" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>A schematic of the cart-pole system</figcaption>
     </div>
-    <p>The study involved analyzing the model outputs by mapping the predicted global distributions of G. huxleyi strains. 
-        Using the thermal traits of each strain, including minimum and maximum temperatures for survival, we calculated probability distributions to determine where each strain could persist across global ocean regions. 
-        This analysis validated the model's prediction by showing that most strains had more than a 15% probability of existing near their original isolation locations. 
-        <!-- This approach showed how thermal adaptation affects the geographic distribution of different strains and offered insights into the mechanisms behind their global biogeographic patterns.  -->
-        The results showed that no single strain could achieve an occurrence probability greater than 1% in all oceanic regions, indicating that the widespread distribution of the species depends on the combined effects of strains with different thermal traits. </p>
-    <!-- <p>Four post-surgery scenarios were explored, including cases with a complete loss of peristalsis in the sleeve tube, uncoordinated contractions in the sleeve, differences in fundus volume, and variations in the regions where antral contraction waves were preserved.</p> -->
+    <p>Key methods such as Policy Iteration and Value Iteration were applied to derive optimal policies and value functions. 
+        By discretizing the state space into 162 regions and employing Euler's method for dynamic modeling, transition probabilities were computed systematically.</p>
+        
+    <p>The results highlight the alignment of optimal policies with physical intuition. 
+        Distinct patterns in the value functions reflect safe and efficient control strategies under varying conditions of angular and linear velocities. 
+        These findings underscore the effectiveness of tailored dynamic programming in solving control problems.</p>
     <div style="text-align: center;">
-        <img src="Coccolithophores_1.png" alt="The number of strains in each latitude and longitude point with at
-        least a 5% probability of occurring" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>The number of strains in each latitude and longitude point with at
-        least a 5% probability of occurring</figcaption>
+        <img src="cart1.png" alt="Value Function and Optimal Policy of Policy Iteration" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Value Function and Optimal Policy of Policy Iteration</figcaption>
     </div>
     <div style="text-align: center;">
-        <img src="cocco_2.png" alt="Predicted geographic extent of all strains in the ecosystem model based on
-        the probability calculation workflow." style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Predicted geographic extent of all strains in the ecosystem model based on
-        the probability calculation workflow</figcaption>
+        <img src="cart2.png" alt="Value Function and Optimal Policy of Value Iteration" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Value Function and Optimal Policy of Value Iteration</figcaption>
     </div>
-    <p>A manuscript based on this work has been submitted to <em>Ecology Letters</em>, which has completed its second round of revisions. 
-        The research advances our understanding of how intraspecific diversity in thermal adaptation shapes species distribution patterns in changing ocean environments.</p>
-    <!-- The findings suggest that surgical outcomes might be improved by carefully considering both sleeve size and preservation of gastric motility. Beyond advancing our understanding of post-surgical gastric mechanics, this work establishes a computational framework for patient-specific surgical planning in bariatric procedures. -->
-    <!-- <p>Simulations were conducted using an immersed-boundary flow solver, modeling a liquid meal to analyze changes in gastric content mixing and emptying rates. Our research has unveiled that varying degrees of gastric volume reduction and impaired motility distinctly influence the stomach's transport, mixing, and emptying processes, which are closely tied to the weight loss outcomes of bariatric surgery.</p> -->
-
-    <!-- <p>A manuscript detailing these insights is currently in preparation—stay tuned for more exciting results!</p> -->
-
 </main>
 
 <footer class="footer text-white text-center py-3">  
