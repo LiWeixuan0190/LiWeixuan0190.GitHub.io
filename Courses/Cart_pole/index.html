@@ -1,0 +1,130 @@
+<!-- Very simple website layout by me. Feel free to copy / adapt. -->
+
+<!DOCTYPE html>
+<html>
+    <style>
+    
+
+        /* Additional Styles for Research Sections */
+        .research-section {
+            margin-bottom: 40px;
+        }
+        .research-section img, .research-section video {
+            max-width: 100%;
+            height: auto;
+        }
+        .research-section h4 {
+            margin-top: 20px;
+            color: #002D72;
+        }
+        .btn-group .btn {
+            margin: 5px;
+        }
+        .image-container {
+        text-align: center;
+    }
+    </style>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weixuan Li</title>
+
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/assets/style.css" media="screen">
+
+        <!-- Font awesome 5 (for icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css ">
+
+        <link rel="icon" type="image/png" href="/assets/img/JHU.logo_vertical.blue.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/assets/img/JHU.logo_vertical.blue.png" sizes="16x16" />
+
+    </head>
+
+    <body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color:#002D72;">
+            <a class="navbar-brand px-2" href="#">Weixuan Li</a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="w-50">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="px-1 nav-item"><a class="nav-link" href="/">About</a></li>
+                        <li class="px-1 nav-item"><a class="nav-link" href="CV/Weixuan_Li_CV.pdf">CV</a></li>
+                        <!-- Projects Dropdown -->
+                        <li class="px-1 nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Research
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                <a class="dropdown-item" href="/Projects/gastrectomy">Laparoscopic Sleeve Gastrectomy</a>
+                                <a class="dropdown-item" href="/Projects/LES">LES Turbulent Channel Flow</a>
+                                <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<main class="container project-content">
+    <h2>Reinforcement Learning, Cart-Pole Problem</h2>
+    <p><a href="Intraspecific diversity in thermal performance determines.pdf" target="_blank">View PDF of Preprint Manuscript</a></p>
+    <p>My research at MIT explored how thermal diversity within marine phytoplankton species influences their global distribution and ecological niches through computational modeling approaches. 
+        The study focused on <em>Gephyrocapsa huxleyi</em>, a globally distributed coccolithophore species crucial for marine carbon cycling, using both experimental data and computational modeling approaches.</p>
+    <p>I was responsible for computational analysis in this project, utilizing MIT's Darwin ecosystem model to examine the implications of thermal trait diversity on phytoplankton distribution. 
+        The model resolved different phytoplankton types with varying thermal optima and niche widths, incorporating both "specialist" and "generalist" thermal strategies. 
+        The simulation revealed distinctive biogeographic patterns, with generalist strains dominating in temperate regions while specialists thrived in subtropical gyres. 
+        This distribution pattern was influenced by both temperature variability and local resource availability.
+    <div style="text-align: center;">
+        <img src="cocco_3.png" alt="Biomass-Weighted Thermal Niche Width" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Biomass-Weighted Thermal Niche Width</figcaption>
+    </div>
+    <p>The study involved analyzing the model outputs by mapping the predicted global distributions of G. huxleyi strains. 
+        Using the thermal traits of each strain, including minimum and maximum temperatures for survival, we calculated probability distributions to determine where each strain could persist across global ocean regions. 
+        This analysis validated the model's prediction by showing that most strains had more than a 15% probability of existing near their original isolation locations. 
+        <!-- This approach showed how thermal adaptation affects the geographic distribution of different strains and offered insights into the mechanisms behind their global biogeographic patterns.  -->
+        The results showed that no single strain could achieve an occurrence probability greater than 1% in all oceanic regions, indicating that the widespread distribution of the species depends on the combined effects of strains with different thermal traits. </p>
+    <!-- <p>Four post-surgery scenarios were explored, including cases with a complete loss of peristalsis in the sleeve tube, uncoordinated contractions in the sleeve, differences in fundus volume, and variations in the regions where antral contraction waves were preserved.</p> -->
+    <div style="text-align: center;">
+        <img src="Coccolithophores_1.png" alt="The number of strains in each latitude and longitude point with at
+        least a 5% probability of occurring" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>The number of strains in each latitude and longitude point with at
+        least a 5% probability of occurring</figcaption>
+    </div>
+    <div style="text-align: center;">
+        <img src="cocco_2.png" alt="Predicted geographic extent of all strains in the ecosystem model based on
+        the probability calculation workflow." style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Predicted geographic extent of all strains in the ecosystem model based on
+        the probability calculation workflow</figcaption>
+    </div>
+    <p>A manuscript based on this work has been submitted to <em>Ecology Letters</em>, which has completed its second round of revisions. 
+        The research advances our understanding of how intraspecific diversity in thermal adaptation shapes species distribution patterns in changing ocean environments.</p>
+    <!-- The findings suggest that surgical outcomes might be improved by carefully considering both sleeve size and preservation of gastric motility. Beyond advancing our understanding of post-surgical gastric mechanics, this work establishes a computational framework for patient-specific surgical planning in bariatric procedures. -->
+    <!-- <p>Simulations were conducted using an immersed-boundary flow solver, modeling a liquid meal to analyze changes in gastric content mixing and emptying rates. Our research has unveiled that varying degrees of gastric volume reduction and impaired motility distinctly influence the stomach's transport, mixing, and emptying processes, which are closely tied to the weight loss outcomes of bariatric surgery.</p> -->
+
+    <!-- <p>A manuscript detailing these insights is currently in preparation—stay tuned for more exciting results!</p> -->
+
+</main>
+
+<footer class="footer text-white text-center py-3">  
+    <div class="container">
+        <span>Contact: wli142@jh.edu | Master's Student @ Johns Hopkins University</span>
+    </div>
+</footer>
+
+</body>
+</html>
