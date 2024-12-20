@@ -22,7 +22,11 @@
         }
         .image-container {
         text-align: center;
-    }
+        }
+        .references p {
+            margin-top: 0;
+            margin-bottom: 0.05em;
+        }
     </style>
 
     <head>
@@ -92,44 +96,54 @@
 
 
 <main class="container project-content">
-    <h2>Computational Modeling of Marine Ecosystems: Phytoplankton Thermal Diversity Research</h2>
-    <p><a href="Intraspecific diversity in thermal performance determines.pdf" target="_blank">View PDF of Preprint Manuscript</a></p>
-    <p>My research at MIT explored how thermal diversity within marine phytoplankton species influences their global distribution and ecological niches through computational modeling approaches. 
-        The study focused on <em>Gephyrocapsa huxleyi</em>, a globally distributed coccolithophore species crucial for marine carbon cycling, using both experimental data and computational modeling approaches.</p>
-    <p>I was responsible for computational analysis in this project, utilizing MIT's Darwin ecosystem model to examine the implications of thermal trait diversity on phytoplankton distribution. 
-        The model resolved different phytoplankton types with varying thermal optima and niche widths, incorporating both "specialist" and "generalist" thermal strategies. 
-        The simulation revealed distinctive biogeographic patterns, with generalist strains dominating in temperate regions while specialists thrived in subtropical gyres. 
-        This distribution pattern was influenced by both temperature variability and local resource availability.
-    <div style="text-align: center;">
-        <img src="cocco_3.png" alt="Biomass-Weighted Thermal Niche Width" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>Biomass-Weighted Thermal Niche Width</figcaption>
+    <h2>Dynamics of Falling Droplets under Body Forces</h2>
+    <p><a href="Weixuan Li_Project 1.pdf" target="_blank">View PDF of Final Report</a></p>
+    <p>This project investigates the behavior of two-dimensional falling droplets using numerical simulations to understand their deformation and breakup dynamics under body forces. 
+        The study explores the role of Eötvös (𝐸𝑜) and Ohnesorge (𝑂ℎ) numbers, key nondimensional parameters, in shaping droplet evolution. 
+        These simulations were conducted using the CodeC3-frt-st-RK3.m framework developed by Grétar Tryggvason<sup>[1]</sup>.</p>
+        <div style="text-align: center;">
+        <img src="Setup.png" alt="Schematic Illustration of Computational Setup of 2D Falling Droplet" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Schematic Illustration of Computational Setup of 2D Falling Droplet.</figcaption>
     </div>
-    <p>The study involved analyzing the model outputs by mapping the predicted global distributions of G. huxleyi strains. 
-        Using the thermal traits of each strain, including minimum and maximum temperatures for survival, we calculated probability distributions to determine where each strain could persist across global ocean regions. 
-        This analysis validated the model's prediction by showing that most strains had more than a 15% probability of existing near their original isolation locations. 
-        <!-- This approach showed how thermal adaptation affects the geographic distribution of different strains and offered insights into the mechanisms behind their global biogeographic patterns.  -->
-        The results showed that no single strain could achieve an occurrence probability greater than 1% in all oceanic regions, indicating that the widespread distribution of the species depends on the combined effects of strains with different thermal traits. </p>
-    <!-- <p>Four post-surgery scenarios were explored, including cases with a complete loss of peristalsis in the sleeve tube, uncoordinated contractions in the sleeve, differences in fundus volume, and variations in the regions where antral contraction waves were preserved.</p> -->
+    <p>Through a comprehensive analysis, the work demonstrates how low 𝐸𝑜 values result in minimal deformation, 
+        while higher values lead to complex breakup modes, such as disk-like or backward-facing bag structures. 
+        Similarly, low 𝑂ℎ numbers induce rapid deformation and fragmentation, whereas higher values stabilize the droplet's shape, 
+        forming thin fluid films.</p>
     <div style="text-align: center;">
-        <img src="Coccolithophores_1.png" alt="The number of strains in each latitude and longitude point with at
-        least a 5% probability of occurring" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>The number of strains in each latitude and longitude point with at
-        least a 5% probability of occurring</figcaption>
+        <img src="Eo_Contour.png" alt="Eo_Contour" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Effects of 𝐸𝑜 on the falling and breaking up of a drop. The time interval is 
+        &#916;<i>t<sup>*</sup> = 0.3369</i>. The last interface is plotted at 
+        <i>t<sup>*</sup> = 6</i> (a), <i>t<sup>*</sup> = 8</i> (b) and <i>t<sup>*</sup> = 4</i> (c).</figcaption>
     </div>
     <div style="text-align: center;">
-        <img src="cocco_2.png" alt="Predicted geographic extent of all strains in the ecosystem model based on
-        the probability calculation workflow" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Predicted geographic extent of all strains in the ecosystem model based on
-        the probability calculation workflow</figcaption>
+        <img src="Eo_Ar.png" alt="Eo_Ar" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Effects of 𝐸𝑜 number. The aspect ratios and the centroid velocities versus non-dimensional time with different 𝐸𝑜 numbers: 
+        𝐸𝑜 = 6, 12, 28.8.</figcaption>
     </div>
-    <p>A manuscript based on this work has been submitted to <em>Ecology Letters</em>, which has completed its second round of revisions. 
-        The research advances our understanding of how intraspecific diversity in thermal adaptation shapes species distribution patterns in changing ocean environments.</p>
-    <!-- The findings suggest that surgical outcomes might be improved by carefully considering both sleeve size and preservation of gastric motility. Beyond advancing our understanding of post-surgical gastric mechanics, this work establishes a computational framework for patient-specific surgical planning in bariatric procedures. -->
-    <!-- <p>Simulations were conducted using an immersed-boundary flow solver, modeling a liquid meal to analyze changes in gastric content mixing and emptying rates. Our research has unveiled that varying degrees of gastric volume reduction and impaired motility distinctly influence the stomach's transport, mixing, and emptying processes, which are closely tied to the weight loss outcomes of bariatric surgery.</p> -->
-
-    <!-- <p>A manuscript detailing these insights is currently in preparation—stay tuned for more exciting results!</p> -->
-
+    <div style="text-align: center;">
+        <img src="Oh_Contour.png" alt="Oh_Contour" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Effects of 𝑂ℎ on the falling and breaking up of a drop. 𝐸𝑜 is fixed at 28.8. The time interval is 
+        &#916;<i>t<sup>*</sup> = 0.3369</i>. The last interface is plotted at 
+        <i>t<sup>*</sup> = 4</i> (a), <i>t<sup>*</sup> = 4</i> (b) and <i>t<sup>*</sup> = 8</i> (c).</figcaption>
+    </div>
+    <div style="text-align: center;">
+        <img src="Oh_Ar.png" alt="Oh_Ar" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Effects of 𝑂ℎ number. The aspect ratios and the centroid velocities versus non-dimensional time with different 𝑂ℎ numbers: 𝑂ℎ = 0.05, 0.07, 0.1.</figcaption>
+    </div>
+    <p>This project explores the balance of body force, surface tension, and viscous effects governing droplet dynamics, 
+        with implications for meteorology, spray cooling, and pharmaceutical applications. 
+        Future studies could extend this work to three-dimensional simulations and incorporate additional external forces to further elucidate the mechanisms of droplet behavior in diverse conditions.</p>
 </main>
+
+<div class="references">
+    <p>References:</p>
+    <p>[1] Gretar Tryggvason. Simulating multiphase flows using a front-tracking/finite-
+        volume method. https://multiphaseflowdns.com, 2016. Accessed: 2024-
+        10-14, Code: CodeC3-frt-st-RK3.m.</p>
+    <p>[2] Jaehoon Han and Grétar Tryggvason. Secondary breakup of axisymmetric liquid
+        drops. i. acceleration by a constant body force. Physics of fluids, 11(12):3650–3667,
+        1999.</p>
+</div>
 
 <footer class="footer text-white text-center py-3">  
     <div class="container">
