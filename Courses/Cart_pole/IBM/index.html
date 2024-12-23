@@ -82,8 +82,9 @@
                                 Course Projects
                             </a>
                             <div class="dropdown-menu" aria-labelledby="coursesDropdown">
-                                <a class="dropdown-item" href="/Courses/Cart_pole/">Cart-Pole</a>
-                                <a class="dropdown-item" href="/Courses/Falling_drop/">Falling drop</a>
+                                <a class="dropdown-item" href="/Courses/Cart_pole/">Cart-Pole - Reinforcement Learning</a>
+                                <a class="dropdown-item" href="/Courses/Cart_pole/Falling_drop/">Falling Drop - Two-Phase Flow Simulation</a>
+                                <a class="dropdown-item" href="/Courses/Cart_pole/Falling_drop/">Flow Around Cylinder - IBM Solver</a>
                                 <!-- <a class="dropdown-item" href="/Projects/LES">LES Turbulent Channel Flow</a>
                                 <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a> -->
                             </div>
@@ -105,26 +106,33 @@
         The cylinder boundary is embedded in a Cartesian grid using a binary matrix approach that adjusts velocity and pressure stencils near the boundary. 
         This approach simplifies mesh generation and ensures accurate modeling of fluid-solid interactions.
     <div style="text-align: center;">
-        <img src="cartpole.png" alt="A Schematic of the Cart-Pole System" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>A Schematic of the Cart-Pole System</figcaption>
+        <img src="Cylinder.png" alt="Schematic Configuration of Flow Around Cylinder Problem" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Schematic Configuration of Flow Around Cylinder Problem</figcaption>
     </div>
     <p>Simulations are performed at Reynolds numbers of 150, 300, and 1000. Lower Reynolds numbers exhibit steady wake patterns, while higher ones show periodic vortex shedding with more intense turbulence. 
         The calculated drag coefficients and Strouhal numbers match benchmark data, confirming the reliability of the numerical procedure. 
-        Grid refinement studies indicate that finer grids and larger domain sizes improve accuracy but increase computational cost.</p> 
-    <p>By comparing results with established references, the IBM solver shows robust performance in capturing both laminar and unsteady flow features. 
+        By comparing results with established references, the IBM solver shows robust performance in capturing both laminar and unsteady flow features. 
         The combination of the Adams-Bashforth scheme for convection and the Crank-Nicolson scheme for diffusion yields stable time advancement. 
         The fractional-step approach ensures incompressibility by maintaining a divergence-free velocity field.</p>
     <div style="text-align: center;">
-        <img src="cart1.png" alt="Value Function and Optimal Policy of Policy Iteration" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Value Function and Optimal Policy of Policy Iteration</figcaption>
+        <img src="un_cylinder.png" alt="Streamwise Velocity at t=10s (left), t=50s (middle), t=100s(right)" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Streamwise Velocity at t=1s (left), t=50s (middle), t=100s (right)</figcaption>
     </div>
     <div style="text-align: center;">
-        <img src="cart2.png" alt="Value Function and Optimal Policy of Value Iteration" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Value Function and Optimal Policy of Value Iteration</figcaption>
+        <img src="p_cylinder.png" alt="Pressure at t=1s (left), t=50s (middle), t=100s (right)" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Pressure at t=1s (left), t=50s (middle), t=100s (right)</figcaption>
     </div>
     <p>The study also employs the Immersed Boundary Method to simulate flow around an ellipsoid, revealing asymmetric wake formation and varied vortex shedding compared to a cylinder. 
         Results at Reynolds numbers 150, 300, and 1000 show distinct drag coefficients and Strouhal numbers, validating the solver’s ability to handle complex, non-circular geometries effectively.</p>
-</main>
+    <div style="text-align: center;">
+            <img src="un_cylinder.png" alt="Streamwise Velocity at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)" style="width: 80%; max-width: 600px; height: auto;">
+        <figcaption>Streamwise Velocity at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)</figcaption>
+    </div>
+    <div style="text-align: center;">
+            <img src="p_cylinder.png" alt="Pressure at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)" style="width: 80%; max-width: 600px; height: auto;">
+        <figcaption>Pressure at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)</figcaption>
+    </div>
+    </main>
 
 <div class="references">
     <p>References:</p>
