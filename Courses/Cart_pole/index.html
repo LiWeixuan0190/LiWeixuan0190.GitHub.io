@@ -63,7 +63,7 @@
                         <li class="px-1 nav-item"><a class="nav-link" href="/">About</a></li>
                         <li class="px-1 nav-item"><a class="nav-link" href="CV/Weixuan_Li_CV.pdf">CV</a></li>
                         <!-- Projects Dropdown -->
-                        <li class="px-1 nav-item dropdown active">
+                        <li class="px-1 nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Research
                             </a>
@@ -73,9 +73,9 @@
                                 <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a>
                             </div>
                         </li>
-                        <li class="px-1 nav-item dropdown">
+                        <li class="px-1 nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Projects
+                                Course Projects
                             </a>
                             <div class="dropdown-menu" aria-labelledby="coursesDropdown">
                                 <a class="dropdown-item" href="/Courses/Cart_pole/">Cart-Pole</a>
@@ -93,6 +93,8 @@
 
 <main class="container project-content">
     <h2>Reinforcement Learning for Cart-Pole Control</h2>
+    <h4>Course: Statistical Learning for Engineers (Machine Learning)</h4>
+    <h4>Instructor: Jin Seob Kim</h4>
     <p><a href="Final_Report_Cart_Pole_Problem.pdf" target="_blank">View PDF of Final Report</a></p>
     <p><a href="Implementation_code.zip" target="_blank">View Python Code</a></p>
     <p>This project explores the application of reinforcement learning techniques to solve the classic cart-pole problem, a benchmark control challenge involving a 2D inverted pendulum. The objective is to balance a pole on a moving cart by applying forces to the cart, ensuring stability despite dynamic and nonlinear system behavior.</p>
@@ -105,7 +107,7 @@
         
     <p>The results highlight the alignment of optimal policies with physical intuition. 
         Distinct patterns in the value functions reflect safe and efficient control strategies under varying conditions of angular and linear velocities. 
-        These findings underscore the effectiveness of tailored dynamic programming in solving control problems.</p>
+        These findings underscore the effectiveness of dynamic programming in solving control problems.</p>
     <div style="text-align: center;">
         <img src="cart1.png" alt="Value Function and Optimal Policy of Policy Iteration" style="width: 80%; max-width: 600px; height: auto;">
     <figcaption>Value Function and Optimal Policy of Policy Iteration</figcaption>
