@@ -1,0 +1,140 @@
+<!-- Very simple website layout by me. Feel free to copy / adapt. -->
+
+<!DOCTYPE html>
+<html>
+    <style>
+    
+
+        /* Additional Styles for Research Sections */
+        .research-section {
+            margin-bottom: 40px;
+        }
+        .research-section img, .research-section video {
+            max-width: 100%;
+            height: auto;
+        }
+        .research-section h4 {
+            margin-top: 20px;
+            color: #002D72;
+        }
+        .btn-group .btn {
+            margin: 5px;
+        }
+        .image-container {
+        text-align: center;
+        }
+        .references p {
+            margin-top: 0;
+            margin-bottom: 0.05em;
+        }
+    </style>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weixuan Li</title>
+
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/assets/style.css" media="screen">
+
+        <!-- Font awesome 5 (for icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css ">
+
+        <link rel="icon" type="image/png" href="/assets/img/JHU.logo_vertical.blue.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/assets/img/JHU.logo_vertical.blue.png" sizes="16x16" />
+
+    </head>
+
+    <body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color:#002D72;">
+            <a class="navbar-brand px-2" href="#">Weixuan Li</a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="w-50">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="px-1 nav-item"><a class="nav-link" href="/">About</a></li>
+                        <li class="px-1 nav-item"><a class="nav-link" href="CV/Weixuan_Li_CV.pdf">CV</a></li>
+                        <!-- Projects Dropdown -->
+                        <li class="px-1 nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Research
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                <a class="dropdown-item" href="/Projects/gastrectomy">Laparoscopic Sleeve Gastrectomy</a>
+                                <a class="dropdown-item" href="/Projects/LES">LES Turbulent Channel Flow</a>
+                                <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a>
+                            </div>
+                        </li>
+                        <li class="px-1 nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <a class="dropdown-item" href="/Courses/Cart_pole/">Cart-Pole</a>
+                                <a class="dropdown-item" href="/Courses/Falling_drop/">Falling drop</a>
+                                <!-- <a class="dropdown-item" href="/Projects/LES">LES Turbulent Channel Flow</a>
+                                <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<main class="container project-content">
+    <h2>Cylinder Flow with the Immersed Boundary Method</h2>
+    <p><a href="Final project_Weixuan Li_CFD.pdf" target="_blank">View PDF of Final Report</a></p>
+    <p>Flow around a cylinder is a classic fluid dynamics problem that reveals vortex shedding, wake formation, and flow separation. 
+        This study uses the <b>Immersed Boundary Method (IBM)</b> within a fractional-step solver to simulate these flows without the need for complex body-fitted grids. 
+        The cylinder boundary is embedded in a Cartesian grid using a binary matrix approach that adjusts velocity and pressure stencils near the boundary. 
+        This approach simplifies mesh generation and ensures accurate modeling of fluid-solid interactions.
+    <div style="text-align: center;">
+        <img src="cartpole.png" alt="A Schematic of the Cart-Pole System" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>A Schematic of the Cart-Pole System</figcaption>
+    </div>
+    <p>Simulations are performed at Reynolds numbers of 150, 300, and 1000. Lower Reynolds numbers exhibit steady wake patterns, while higher ones show periodic vortex shedding with more intense turbulence. 
+        The calculated drag coefficients and Strouhal numbers match benchmark data, confirming the reliability of the numerical procedure. 
+        Grid refinement studies indicate that finer grids and larger domain sizes improve accuracy but increase computational cost.</p> 
+    <p>By comparing results with established references, the IBM solver shows robust performance in capturing both laminar and unsteady flow features. 
+        The combination of the Adams-Bashforth scheme for convection and the Crank-Nicolson scheme for diffusion yields stable time advancement. 
+        The fractional-step approach ensures incompressibility by maintaining a divergence-free velocity field.</p>
+    <div style="text-align: center;">
+        <img src="cart1.png" alt="Value Function and Optimal Policy of Policy Iteration" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Value Function and Optimal Policy of Policy Iteration</figcaption>
+    </div>
+    <div style="text-align: center;">
+        <img src="cart2.png" alt="Value Function and Optimal Policy of Value Iteration" style="width: 80%; max-width: 600px; height: auto;">
+    <figcaption>Value Function and Optimal Policy of Value Iteration</figcaption>
+    </div>
+    <p>The study also employs the Immersed Boundary Method to simulate flow around an ellipsoid, revealing asymmetric wake formation and varied vortex shedding compared to a cylinder. 
+        Results at Reynolds numbers 150, 300, and 1000 show distinct drag coefficients and Strouhal numbers, validating the solver’s ability to handle complex, non-circular geometries effectively.</p>
+</main>
+
+<div class="references">
+    <p>References:</p>
+    <p>[1] Qu, L., Norberg, C., Davidson, L., Peng, S. H., & Wang, F. (2013). Quantitative numerical analysis of flow past a circular cylinder at Reynolds number between 50 and 200. Journal of Fluids and Structures, 39, 347-370.</p>
+    <p>[2] Franke, R., Rodi, W., & Schönung, B. (1990). Numerical calculation of laminar vortex-shedding flow past cylinders. Journal of Wind Engineering and Industrial Aerodynamics, 35, 237-257.</p>
+</div>
+
+<footer class="footer text-white text-center py-3">  
+    <div class="container">
+        <span>Contact: wli142@jh.edu | Master's Student @ Johns Hopkins University</span>
+    </div>
+</footer>
+
+</body>
+</html>
