@@ -98,47 +98,42 @@
 
 
 <main class="container project-content">
-    <h2>Cylinder Flow with the Immersed Boundary Method</h2>
+    <h2>Lid-Driven Cavity Flow - 2D Finite Difference Method</h2>
     <h4>Course: Computational Fluid Dynamics</h4>
     <h4>Instructor: Rajat Mittal</h4>
-    <p><a href="Final project_Weixuan Li_CFD.pdf" target="_blank">View PDF of Final Report (MATLAB Code Included)</a></p>
-    <p>Flow around a cylinder is a classic fluid dynamics problem that reveals vortex shedding, wake formation, and flow separation. 
-        This study uses the <b>Immersed Boundary Method (IBM)</b> within a fractional-step solver to simulate these flows without the need for complex body-fitted grids. 
-        The cylinder boundary is embedded in a Cartesian grid using a binary matrix approach that adjusts velocity and pressure stencils near the boundary. 
-        This approach simplifies mesh generation and ensures accurate modeling of fluid-solid interactions.
+    <p><a href="HW4_Weixuan Li_Report.pdf" target="_blank">View PDF of Final Report (MATLAB Code Included)</a></p>
+    <p>This project develops a two-dimensional Navier-Stokes solver for the lid-driven cavity flow, employing the finite difference method on a semi-staggered mesh. 
+        Spatial derivatives are approximated with a central difference scheme of second order, while time advancement follows a fractional-step procedure with Adams-Bashforth (AB2) for convection and Crank–Nicolson (CN2) for viscous terms. 
+        To resolve pressure and velocity accurately, face-centered velocities are updated separately to reduce divergence, ensuring that the velocity field remains divergence-free at each time step. 
+        A ghost point method is used to apply boundary conditions, simplifying the treatment of the moving lid and stationary walls. Additionally, a line Successive Over-Relaxation (SOR) approach is employed to solve the matrix equations efficiently.</p>
     <div style="text-align: center;">
-        <img src="Cylinder.png" alt="Schematic Configuration of Flow Around Cylinder Problem" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>Schematic Configuration of Flow Around Cylinder Problem</figcaption>
-    </div>
-    <p>Simulations are performed at Reynolds numbers of 150, 300, and 1000. Lower Reynolds numbers exhibit steady wake patterns, while higher ones show periodic vortex shedding with more intense turbulence. 
-        The calculated drag coefficients and Strouhal numbers match benchmark data, confirming the reliability of the numerical procedure. 
-        By comparing results with established references, the IBM solver shows robust performance in capturing both laminar and unsteady flow features. 
-        The combination of the Adams-Bashforth scheme for convection and the Crank-Nicolson scheme for diffusion yields stable time advancement. 
-        The fractional-step approach ensures incompressibility by maintaining a divergence-free velocity field.</p>
-    <div style="text-align: center;">
-        <img src="un_cylinder.png" alt="Streamwise Velocity at t=10s (left), t=50s (middle), t=100s(right)" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Streamwise Velocity at t=1s (left), t=50s (middle), t=100s (right)</figcaption>
+        <img src="streamlines_Re100.png" alt="Streamlines with Re=100 at different grid resolutions" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Streamlines with Re=100 at different grid resolutions</figcaption>
     </div>
     <div style="text-align: center;">
-        <img src="p_cylinder.png" alt="Pressure at t=1s (left), t=50s (middle), t=100s (right)" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Pressure at t=1s (left), t=50s (middle), t=100s (right)</figcaption>
+        <img src="velocity_Re100.png" alt="Centerline Velocity 100" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Comparison of centerline velocity with published data<sup>[1]</sup> when Re=100 on different grid resolutions (a) horizontal velocity at vertical center line; (b) vertical velocity at horizontal center line;</figcaption>
     </div>
-    <p>The study also employs the Immersed Boundary Method to simulate flow around an ellipsoid, revealing asymmetric wake formation and varied vortex shedding compared to a cylinder. 
-        Results at Reynolds numbers 150, 300, and 1000 show distinct drag coefficients and Strouhal numbers, validating the solver’s ability to handle complex, non-circular geometries effectively.</p>
+    <p>The results successfully capture the primary and secondary vortices observed in standard references, and the centerline velocity plots show an accurate depiction of the flow behavior. 
+        Upon refining the grid from 16×16 to 128×128, additional flow structures become evident, highlighting the solver’s ability to capture detailed dynamics. 
+        The centerline velocity comparisons demonstrate high accuracy, matching closely with benchmark data. This consistency across various Reynolds numbers confirms the correctness and stability of the approach employed in this study.</p> 
     <div style="text-align: center;">
-            <img src="un_cylinder.png" alt="Streamwise Velocity at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Streamwise Velocity at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)</figcaption>
+        <img src="streamlines_Re1000.png" alt="Streamlines with Re=1000 at different grid resolutions" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Streamlines with Re=1000 at different grid resolutions</figcaption>
     </div>
     <div style="text-align: center;">
-            <img src="p_cylinder.png" alt="Pressure at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Pressure at t=1s (left), t=5s (middle left), t=10s (middle right), t=50s (right)</figcaption>
+        <img src="velocity_Re1000.png" alt="Centerline Velocity 1000" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Comparison of centerline velocity with published data<sup>[1]</sup> when Re=1000 on different grid resolutions (a) horizontal velocity at vertical center line; (b) vertical velocity at horizontal center line;</figcaption>
     </div>
     </main>
 
 <div class="references">
     <p>References:</p>
-    <p>[1] Qu, L., Norberg, C., Davidson, L., Peng, S. H., & Wang, F. (2013). Quantitative numerical analysis of flow past a circular cylinder at Reynolds number between 50 and 200. Journal of Fluids and Structures, 39, 347-370.</p>
-    <p>[2] Franke, R., Rodi, W., & Schönung, B. (1990). Numerical calculation of laminar vortex-shedding flow past cylinders. Journal of Wind Engineering and Industrial Aerodynamics, 35, 237-257.</p>
+    <p>[1] Ghia, U. K. N. G., Ghia, K. N., & Shin, C. T. (1982). High-Re solutions for incompressible flow using the Navier-Stokes equations and a multigrid method. Journal of computational physics, 48(3), 387-411.</p>
+    <p>[2] Bruneau, C. H., & Jouron, C. (1990). An efficient scheme for solving steady incompressible Navier-Stokes equations. Journal of Computational Physics, 89(2), 389-413.</p>
+    <p>[3] Botella, O., & Peyret, R. (1998). Benchmark spectral results on the lid-driven cavity flow. Computers & Fluids, 27(4), 421-433.</p>
+        
+
 </div>
 
 <footer class="footer text-white text-center py-3">  
