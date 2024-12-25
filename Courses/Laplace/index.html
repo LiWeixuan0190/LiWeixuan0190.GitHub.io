@@ -105,14 +105,14 @@
     <p><a href="WeixuanLi_Final Project_Numerical Methods.pdf" target="_blank">View PDF of Final Report (MATLAB Code Included)</a></p>
     <p>This project focuses on solving the two-dimensional Laplace equation within a defined computational domain featuring an inner boundary set to 𝑢=1 and an outer boundary set to 𝑢=0. 
         Utilizing a second-order central difference scheme for spatial discretization, the study implements the Successive Over-Relaxation (SOR) Gauss-Seidel method to iteratively solve the resulting linear system. 
-        Both Point and Line SOR Gauss-Seidel variants are explored to assess their convergence behaviors and computational efficiencies across various grid resolutions, ranging from 32×32 to 224×224 grid cells.</p>
+        Both Point- and Line-SOR Gauss-Seidel variants are explored to assess their convergence behaviors and computational efficiencies across various grid resolutions, ranging from 32×32 to 224×224 grid cells.</p>
     <div style="text-align: center;">
-        <img src="streamlines_Re100.png" alt="Streamlines with Re=100 at different grid resolutions" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>Streamlines with Re=100 at different grid resolutions</figcaption>
+        <img src="Configuration1.png" alt="Schematic Configuration of Laplace Equation with Different Boundary Conditions" style="width: 80%; max-width: 300px; height: auto;">
+        <figcaption>Schematic Configuration of Laplace Equation with outer boundary 𝑢=0 and inner boundary 𝑢=1</figcaption>
     </div>
     <div style="text-align: center;">
-        <img src="velocity_Re100.png" alt="Centerline Velocity 100" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>Comparison of centerline velocity with published data<sup>[1]</sup> when Re=100 on different grid resolutions (a) horizontal velocity at vertical center line; (b) vertical velocity at horizontal center line;</figcaption>
+        <img src="Workflow.png" alt="Flowchart of the SOR Gauss-Seidel solver" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Flowchart of the SOR Gauss-Seidel solver</figcaption>
     </div>
     <p>Initial investigations reveal that increasing grid resolution significantly enhances the accuracy and refinement of the numerical solutions. 
         However, this improvement needs a greater number of iterative steps and results in higher computational time to achieve convergence. 
@@ -122,15 +122,16 @@
         The comparison between the numerical results and the exact analytical solution through root mean square error analyses confirms that the solver achieves second-order convergence. 
         This validation underscores the reliability and precision of the SOR Gauss-Seidel method implemented in this project.</p>
     <div style="text-align: center;">
-        <img src="streamlines_Re1000.png" alt="Streamlines with Re=1000 at different grid resolutions" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>Streamlines with Re=1000 at different grid resolutions</figcaption>
-    </div>
-    <div style="text-align: center;">
-        <img src="velocity_Re1000.png" alt="Centerline Velocity 1000" style="width: 80%; max-width: 400px; height: auto;">
-        <figcaption>Comparison of centerline velocity with published data<sup>[1]</sup> when Re=1000 on different grid resolutions (a) horizontal velocity at vertical center line; (b) vertical velocity at horizontal center line;</figcaption>
+        <img src="One-circle.png" alt="One circle" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Results of Laplace Equation Solver with One Circle: Contours of the Converged Solutions (Left) and Convergence Curves with Different Overrelaxation Parameters (Right)</figcaption>
     </div>
     <p>Further complexity is introduced by configuring the domain with four circular inner boundaries, highlighting the solver's capability to handle complex geometries. 
-        Comparative analyses between Point and Line-SOR Gauss-Seidel methods reveal that the Line-SOR results display faster convergence rates with fewer iteration steps.</p>
+        Comparative analyses between Point- and Line-SOR Gauss-Seidel methods reveal that the Line-SOR results display faster convergence rates with fewer iteration steps.</p>
+    <div style="text-align: center;">
+        <img src="Four_circle.png" alt="Four circle" style="width: 80%; max-width: 800px; height: auto;">
+         <figcaption>Configuration (Left) and Results of Laplace Equation Solver with Four Circles: Contours of the Converged Solutions (Middle Left),
+             Convergence Curves with Different Overrelaxation Parameters (Middle Right) and Comparison of the Iteration Process of the Point- and Line-SOR Gauss-Seidel Schemes</figcaption>
+    </div>
     </main>
 
 <div class="references">
