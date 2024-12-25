@@ -79,7 +79,7 @@
                         </li>
                         <li class="px-1 nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Projects
+                                Course Projects
                             </a>
                             <div class="dropdown-menu" aria-labelledby="coursesDropdown">
                                 <a class="dropdown-item" href="/Courses/Cart_pole/">Cart-Pole - Reinforcement Learning</a>
@@ -87,6 +87,8 @@
                                 <a class="dropdown-item" href="/Courses/Cart_pole/IBM/">Flow Around Cylinder - IBM Solver</a>
                                 <a class="dropdown-item" href="/Courses/Cavity/">Lid-Driven Cavity FLow - 2D FDM Solver</a>
                                 <a class="dropdown-item" href="/Courses/Laplace/">2D Laplace Equation - SOR Gauss-Seidel Solver</a>
+                                <!-- <a class="dropdown-item" href="/Projects/LES">LES Turbulent Channel Flow</a>
+                                <a class="dropdown-item" href="/Projects/Coccolithophores">Phytoplankton Thermal Diversity</a> -->
                             </div>
                         </li>
                     </ul>
@@ -97,55 +99,47 @@
 
 
 <main class="container project-content">
-    <h2>Dynamics of Falling Droplets under Body Forces</h2>
-    <h4>Course: Multiphase Flow</h4>
-    <h4>Instructor: Gretar Tryggvason</h4>
-    <p><a href="Weixuan Li_Project 1.pdf" target="_blank">View PDF of Final Report</a></p>
-    <p>This project investigates the behavior of two-dimensional falling droplets using numerical simulations to understand their deformation and breakup dynamics under body forces. 
-        The study explores the role of Eötvös (𝐸𝑜) and Ohnesorge (𝑂ℎ) numbers in shaping droplet evolution. 
-        These simulations were conducted using the CodeC3-frt-st-RK3.m framework developed by Grétar Tryggvason<sup>[1]</sup>.</p>
-        <div style="text-align: center;">
-        <img src="Setup.png" alt="Schematic Illustration of Computational Setup of 2D Falling Droplet" style="width: 80%; max-width: 300px; height: auto;">
-        <figcaption>Schematic Illustration of Computational Setup of 2D Falling Droplet.</figcaption>
-    </div>
-    <p>Through a comprehensive analysis, the work demonstrates how low 𝐸𝑜 values result in minimal deformation, 
-        while higher values lead to complex breakup modes, such as disk-like or backward-facing bag structures. 
-        In contrast, low 𝑂ℎ numbers induce rapid deformation and fragmentation, whereas higher values stabilize the droplet's shape, 
-        resulting in the formation of thin fluid films near the symmetry axis.</p>
+    <h2>SOR Gauss-Seidel Solver for the 2D Laplace Equation</h2>
+    <h4>Course: Numerical Methods</h4>
+    <h4>Instructor: Rajat Mittal</h4>
+    <p><a href="WeixuanLi_Final Project_Numerical Methods.pdf" target="_blank">View PDF of Final Report (MATLAB Code Included)</a></p>
+    <p>This project focuses on solving the two-dimensional Laplace equation within a defined computational domain featuring an inner boundary set to 𝑢=1 and an outer boundary set to 𝑢=0. 
+        Utilizing a second-order central difference scheme for spatial discretization, the study implements the Successive Over-Relaxation (SOR) Gauss-Seidel method to iteratively solve the resulting linear system. 
+        Both Point and Line SOR Gauss-Seidel variants are explored to assess their convergence behaviors and computational efficiencies across various grid resolutions, ranging from 32×32 to 224×224 grid cells.</p>
     <div style="text-align: center;">
-        <img src="Eo_Contour.png" alt="Eo_Contour" style="width: 80%; max-width: 300px; height: auto;">
-    <figcaption>Effects of 𝐸𝑜 on the falling and breaking up of a drop. The time interval is 
-        &#916;<i>t<sup>*</sup> = 0.3369</i>. The last interface is plotted at 
-        <i>t<sup>*</sup> = 6</i> (a), <i>t<sup>*</sup> = 8</i> (b) and <i>t<sup>*</sup> = 4</i> (c).</figcaption>
+        <img src="streamlines_Re100.png" alt="Streamlines with Re=100 at different grid resolutions" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Streamlines with Re=100 at different grid resolutions</figcaption>
     </div>
     <div style="text-align: center;">
-        <img src="Eo_Ar.png" alt="Eo_Ar" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Effects of 𝐸𝑜 number. The aspect ratios and the centroid velocities versus non-dimensional time with different 𝐸𝑜 numbers: 
-        𝐸𝑜 = 6, 12, 28.8.</figcaption>
+        <img src="velocity_Re100.png" alt="Centerline Velocity 100" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Comparison of centerline velocity with published data<sup>[1]</sup> when Re=100 on different grid resolutions (a) horizontal velocity at vertical center line; (b) vertical velocity at horizontal center line;</figcaption>
+    </div>
+    <p>Initial investigations reveal that increasing grid resolution significantly enhances the accuracy and refinement of the numerical solutions. 
+        However, this improvement needs a greater number of iterative steps and results in higher computational time to achieve convergence. 
+        To address these challenges, the optimal relaxation parameter 𝜔 is determined for each grid size. 
+        This optimization effectively accelerates convergence rates without compromising the stability of the solver. 
+        Additionally, to ensure the solver's accuracy, a theoretical solution to radial symmetry case is employed. 
+        The comparison between the numerical results and the exact analytical solution through root mean square error analyses confirms that the solver achieves second-order convergence. 
+        This validation underscores the reliability and precision of the SOR Gauss-Seidel method implemented in this project.</p>
+    <div style="text-align: center;">
+        <img src="streamlines_Re1000.png" alt="Streamlines with Re=1000 at different grid resolutions" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Streamlines with Re=1000 at different grid resolutions</figcaption>
     </div>
     <div style="text-align: center;">
-        <img src="Oh_Contour.png" alt="Oh_Contour" style="width: 80%; max-width: 300px; height: auto;">
-    <figcaption>Effects of 𝑂ℎ on the falling and breaking up of a drop. 𝐸𝑜 is fixed at 28.8. The time interval is 
-        &#916;<i>t<sup>*</sup> = 0.3369</i>. The last interface is plotted at 
-        <i>t<sup>*</sup> = 4</i> (a), <i>t<sup>*</sup> = 4</i> (b) and <i>t<sup>*</sup> = 8</i> (c).</figcaption>
+        <img src="velocity_Re1000.png" alt="Centerline Velocity 1000" style="width: 80%; max-width: 400px; height: auto;">
+        <figcaption>Comparison of centerline velocity with published data<sup>[1]</sup> when Re=1000 on different grid resolutions (a) horizontal velocity at vertical center line; (b) vertical velocity at horizontal center line;</figcaption>
     </div>
-    <div style="text-align: center;">
-        <img src="Oh_Ar.png" alt="Oh_Ar" style="width: 80%; max-width: 600px; height: auto;">
-    <figcaption>Effects of 𝑂ℎ number. The aspect ratios and the centroid velocities versus non-dimensional time with different 𝑂ℎ numbers: 𝑂ℎ = 0.05, 0.07, 0.1.</figcaption>
-    </div>
-    <p>This project explores the balance of body force, surface tension, and viscous effects governing droplet dynamics. 
-        The behavior of falling droplets has significant implications for fields such as meteorology, spray cooling, and pharmaceutical applications.
-        Future studies could extend this work to three-dimensional simulations and incorporate additional external forces to further elucidate the mechanisms of droplet behavior in diverse conditions.</p>
-</main>
+    <p>Further complexity is introduced by configuring the domain with four circular inner boundaries, highlighting the solver's capability to handle complex geometries. 
+        Comparative analyses between Point and Line-SOR Gauss-Seidel methods reveal that the Line-SOR results display faster convergence rates with fewer iteration steps.</p>
+    </main>
 
 <div class="references">
     <p>References:</p>
-    <p>[1] Gretar Tryggvason. Simulating multiphase flows using a front-tracking/finite-
-        volume method. https://multiphaseflowdns.com, 2016. Accessed: 2024-
-        10-14, Code: CodeC3-frt-st-RK3.m.</p>
-    <p>[2] Jaehoon Han and Grétar Tryggvason. Secondary breakup of axisymmetric liquid
-        drops. i. acceleration by a constant body force. Physics of fluids, 11(12):3650–3667,
-        1999.</p>
+    <p>[1] Ghia, U. K. N. G., Ghia, K. N., & Shin, C. T. (1982). High-Re solutions for incompressible flow using the Navier-Stokes equations and a multigrid method. Journal of computational physics, 48(3), 387-411.</p>
+    <p>[2] Bruneau, C. H., & Jouron, C. (1990). An efficient scheme for solving steady incompressible Navier-Stokes equations. Journal of Computational Physics, 89(2), 389-413.</p>
+    <p>[3] Botella, O., & Peyret, R. (1998). Benchmark spectral results on the lid-driven cavity flow. Computers & Fluids, 27(4), 421-433.</p>
+        
+
 </div>
 
 <footer class="footer text-white text-center py-3">  
