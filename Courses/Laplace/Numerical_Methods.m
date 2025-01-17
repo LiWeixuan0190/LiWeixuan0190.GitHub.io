@@ -641,24 +641,9 @@ for i = 2:N
     upperDiag = 1 - c_inner(i, 2:N-1);
     lowerDiag = 1 - c_inner(i, 3:N);
 
-    triDiagMatrix_row = diag(mainDiagx) + diag(upperDiag, 1) + diag(lowerDiag, -1);
-    unew(i,2:N)=triDiagMatrix_row\b;
+    unew(i,2:N) = tdmac(lowerDiag,(3:N),mainDiagx(2:N),upperDiag(2:N-1),b,N-1);
     temp(i,2:N)=(1-omega).*u(i,2:N)+omega.*unew(i,2:N);
     unew(i,2:N)=temp(i,2:N);
-end
-
-
-% column
-for j = 2:N
-    mainDiagx = (1 - c_inner(2:N, j)) * (-4.0) + c_inner(2:N, j);
-    b(1:N-1) = -(1 - c_inner(2:N, j)) .* (temp(2:N, j-1) + temp(2:N, j+1)) + c_inner(2:N, j);
-    upperDiag = 1 - c_inner(2:N-1, j);
-    lowerDiag = 1 - c_inner(3:N, j);
-
-    triDiagMatrix_row = diag(mainDiagx) + diag(upperDiag, 1) + diag(lowerDiag, -1);
-    unew(2:N, j)=triDiagMatrix_row\b;
-    temp(2:N, j)=(1-omega).*u(2:N,j)+omega.*unew(2:N,j);
-    unew(2:N, j)=temp(2:N, j);
 end
 
 u=unew;
@@ -834,3 +819,13 @@ while rtot>1e-5
 end
 end
 
+function [x] = tdmac(a,b,c,d,n)
+    for i=2:n
+        b(i) = b(i) - c(i-1)/b(i-1)*a(i-1);
+        d(i) = d(i) - d(i-1)/b(i-1)*a(i-1);
+    end
+    x(n) = d(n)/b(n);
+    for i=n-1:-1:1
+        x(i) = (d(i) - c(i)*x(i+1))/b(i);
+    end
+end
